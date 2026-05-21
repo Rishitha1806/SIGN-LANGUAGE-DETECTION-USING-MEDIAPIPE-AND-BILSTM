@@ -98,7 +98,7 @@ python realtime_ISL_recognition.py
 
 ---
 
-## 🏆 Development Methodology
+## Development Methodology
 
 1. **Physical Sign Recording**: 106 individual ISL gestural actions were performed in front of a standard 30fps webcam (5 recordings per sign, 30 frames per recording).
 2. **Feature Extraction**: Leveraged **Google MediaPipe Hands API** to bypass pixel buffers and skin segmentation entirely, extracting raw floating-point structural vectors.
@@ -108,7 +108,7 @@ python realtime_ISL_recognition.py
 
 ---
 
-## 📈 Experimental Results & Performance
+## Experimental Results & Performance
 
 Our system underwent rigorous empirical testing, measuring classification accuracy and model convergence metrics across dynamic sequences:
 
@@ -121,7 +121,7 @@ Our system underwent rigorous empirical testing, measuring classification accura
 
 ---
 
-## 🎯 Conclusion & Future Scope
+## Conclusion & Future Scope
 
 ### Conclusion
 The proposed work successfully demonstrates a vision-based real-time Indian Sign Language (ISL) recognition system. By integrating MediaPipe for landmark extraction with a Bidirectional LSTM (BiLSTM) network, the system effectively captures the complex spatial-temporal features of dynamic gestures. 
