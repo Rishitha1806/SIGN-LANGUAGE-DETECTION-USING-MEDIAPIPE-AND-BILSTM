@@ -1,4 +1,4 @@
-# Real-Time Indian Sign Language (ISL) Recognition & Translation System
+# Indian Sign Language Detection using MediaPipe and BiLSTM
 
 An end-to-end deep learning system designed for real-time translation of Indian Sign Language (ISL) into grammatical English and Hindi, complete with stable temporal prediction and text-to-speech feedback.
 
