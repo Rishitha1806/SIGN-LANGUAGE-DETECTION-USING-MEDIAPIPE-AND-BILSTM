@@ -1,0 +1,7 @@
+opencv-python
+numpy
+tensorflow
+mediapipe
+deep-translator
+gtts
+pygame
