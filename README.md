@@ -48,6 +48,15 @@ Below is an overview of the core files in the project and their role in the pipe
 | **`.gitignore`** | Excludes bulky datasets (`.zip`), temporary buffers, and compilation folders to keep the repository clean. |
 
 ---
+## Development Methodology
+
+1. **Physical Sign Recording**: 106 individual ISL gestural actions were performed in front of a standard 30fps webcam (5 recordings per sign, 30 frames per recording).
+2. **Feature Extraction**: Leveraged **Google MediaPipe Hands API** to bypass pixel buffers and skin segmentation entirely, extracting raw floating-point structural vectors.
+3. **Data Augmentation**: Scaled raw entries using normalizations and multiplied existing entries by applying shifts and Gaussian noise adjustments.
+4. **Colab Training**: Trained using the **Adam optimizer** with early stopping which halted model optimization at **Epoch 48** when validation accuracy hit $100\%$.
+5. **Stabilized Inference Deployment**: Deployed model outputs with integrated high-confidence majority voting to achieve latency-free real-time results.
+
+---
 
 ## Neural Network & Methodology
 
@@ -95,16 +104,6 @@ python realtime_ISL_recognition.py
 - **`S`**: Re-speaks the translated sentence aloud.
 - **`C`**: Clears the current text buffers and starts a new sentence.
 - **`Q`**: Safely stops the webcam feed and exits the program.
-
----
-
-## Development Methodology
-
-1. **Physical Sign Recording**: 106 individual ISL gestural actions were performed in front of a standard 30fps webcam (5 recordings per sign, 30 frames per recording).
-2. **Feature Extraction**: Leveraged **Google MediaPipe Hands API** to bypass pixel buffers and skin segmentation entirely, extracting raw floating-point structural vectors.
-3. **Data Augmentation**: Scaled raw entries using normalizations and multiplied existing entries by applying shifts and Gaussian noise adjustments.
-4. **Colab Training**: Trained using the **Adam optimizer** with early stopping which halted model optimization at **Epoch 48** when validation accuracy hit $100\%$.
-5. **Stabilized Inference Deployment**: Deployed model outputs with integrated high-confidence majority voting to achieve latency-free real-time results.
 
 ---
 
