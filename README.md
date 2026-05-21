@@ -4,7 +4,7 @@ An end-to-end deep learning system designed for real-time translation of Indian 
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
 - **Spatial Normalization Pipeline**: Transforms raw coordinates to be **position-invariant** (relative to the wrist) and **distance-invariant** (scaled to hand bounds) for robustness against camera distance and placement.
 - **Deep Learning BiLSTM Brain**: Built on a highly-optimized Multi-Layer **Bidirectional LSTM** network that captures backward and forward temporal dependencies of hand gestures.
@@ -15,7 +15,7 @@ An end-to-end deep learning system designed for real-time translation of Indian 
 
 ---
 
-## 🛠️ System Architecture & Workflow
+## System Architecture & Workflow
 
 ```mermaid
 graph TD
@@ -31,7 +31,7 @@ graph TD
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 Below is an overview of the core files in the project and their role in the pipeline:
 
@@ -49,7 +49,7 @@ Below is an overview of the core files in the project and their role in the pipe
 
 ---
 
-## 🧠 Neural Network & Methodology
+## Neural Network & Methodology
 
 ### 1. Spatial Normalization
 To make the coordinate vectors independent of the user's distance or position in front of the camera, we shift each landmark relative to the wrist point $(x_0, y_0, z_0)$ and scale it to unit boundaries:
@@ -72,25 +72,25 @@ Where $y_c$ is the true binary label and $\hat{y}_c$ is the Softmax probability 
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### 📋 Prerequisites
+### Prerequisites
 Ensure you have Python 3.8 to 3.10 installed on your system. 
 
-### ⚙️ Installation
+### Installation
 1. Clone the project files into a folder.
 2. Open terminal/PowerShell in the folder and run:
    ```bash
    pip install -r requirements.txt
    ```
 
-### 🎮 Running the Live Translation App
+### Running the Live Translation App
 Place the trained model `isl_model.h5` and labels file `label_map.json` into the `models/` directory. Then execute:
 ```bash
 python realtime_ISL_recognition.py
 ```
 
-### ⌨️ Controls
+### Controls
 - **`SPACEBAR`**: Forces instant grammar analysis and Hindi translation.
 - **`S`**: Re-speaks the translated sentence aloud.
 - **`C`**: Clears the current text buffers and starts a new sentence.
@@ -98,7 +98,7 @@ python realtime_ISL_recognition.py
 
 ---
 
-## 🏆 Development Methodology
+## Development Methodology
 
 1. **Physical Sign Recording**: 106 individual ISL gestural actions were performed in front of a standard 30fps webcam (5 recordings per sign, 30 frames per recording).
 2. **Feature Extraction**: Leveraged **Google MediaPipe Hands API** to bypass pixel buffers and skin segmentation entirely, extracting raw floating-point structural vectors.
